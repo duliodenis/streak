@@ -14,6 +14,7 @@
 		6C3CD85B1AF953AC00592BAA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C3CD8591AF953AC00592BAA /* LaunchScreen.xib */; };
 		6C3CD8671AF953AC00592BAA /* StreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3CD8661AF953AC00592BAA /* StreakTests.m */; };
 		6C3CD8731AF9546300592BAA /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3CD8721AF9546300592BAA /* ListViewController.m */; };
+		6C73943B1AFAA03D00F6E91E /* Streak.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73943A1AFAA03D00F6E91E /* Streak.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		6C3CD8661AF953AC00592BAA /* StreakTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreakTests.m; sourceTree = "<group>"; };
 		6C3CD8711AF9546300592BAA /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ViewControllers/ListViewController.h; sourceTree = "<group>"; };
 		6C3CD8721AF9546300592BAA /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ViewControllers/ListViewController.m; sourceTree = "<group>"; };
+		6C7394391AFAA03D00F6E91E /* Streak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Streak.h; path = Models/Streak.h; sourceTree = "<group>"; };
+		6C73943A1AFAA03D00F6E91E /* Streak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Streak.m; path = Models/Streak.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 			children = (
 				6C3CD8541AF953AC00592BAA /* Main.storyboard */,
 				6C3CD8701AF9543600592BAA /* ViewControllers */,
+				6C7394381AFAA00E00F6E91E /* Models */,
 				6C3CD8571AF953AC00592BAA /* Images.xcassets */,
 				6C3CD8591AF953AC00592BAA /* LaunchScreen.xib */,
 				6C3CD84A1AF953AC00592BAA /* Supporting Files */,
@@ -125,6 +129,15 @@
 				6C3CD8721AF9546300592BAA /* ListViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6C7394381AFAA00E00F6E91E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6C7394391AFAA03D00F6E91E /* Streak.h */,
+				6C73943A1AFAA03D00F6E91E /* Streak.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C3CD8501AF953AC00592BAA /* AppDelegate.m in Sources */,
+				6C73943B1AFAA03D00F6E91E /* Streak.m in Sources */,
 				6C3CD8731AF9546300592BAA /* ListViewController.m in Sources */,
 				6C3CD84D1AF953AC00592BAA /* main.m in Sources */,
 			);
@@ -426,6 +440,7 @@
 				6C3CD86C1AF953AC00592BAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6C3CD86D1AF953AC00592BAA /* Build configuration list for PBXNativeTarget "StreakTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +449,7 @@
 				6C3CD86F1AF953AC00592BAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
