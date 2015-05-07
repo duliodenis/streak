@@ -56,7 +56,7 @@
         <!--New Streak-->
         <scene sceneID="Rzq-00-ZmJ">
             <objects>
-                <viewController id="xYG-kN-daj" sceneMemberID="viewController">
+                <viewController id="xYG-kN-daj" customClass="AddStreakViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0n9-6u-eqr"/>
                         <viewControllerLayoutGuide type="bottom" id="Fjz-Dm-6hS"/>
@@ -65,12 +65,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhC-RF-FOi">
-                                <rect key="frame" x="137" y="530" width="30" height="30"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of your streak" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ywT-fv-qG2">
                                 <rect key="frame" x="16" y="89" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -81,13 +75,16 @@
                         <constraints>
                             <constraint firstItem="ywT-fv-qG2" firstAttribute="leading" secondItem="OWP-CL-3nY" secondAttribute="leadingMargin" id="05o-Or-G9W"/>
                             <constraint firstItem="ywT-fv-qG2" firstAttribute="trailing" secondItem="OWP-CL-3nY" secondAttribute="trailingMargin" id="5O9-Ty-RdA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zhC-RF-FOi" secondAttribute="trailing" constant="137" id="Uwp-WL-UZM"/>
-                            <constraint firstItem="Fjz-Dm-6hS" firstAttribute="top" secondItem="zhC-RF-FOi" secondAttribute="bottom" constant="8" id="hjh-0c-QHk"/>
                             <constraint firstItem="ywT-fv-qG2" firstAttribute="top" secondItem="0n9-6u-eqr" secondAttribute="bottom" constant="25" id="lvT-Dr-kQf"/>
-                            <constraint firstItem="zhC-RF-FOi" firstAttribute="leading" secondItem="OWP-CL-3nY" secondAttribute="leadingMargin" constant="121" id="tkS-Z0-GgC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Streak" id="bPe-bm-VNk"/>
+                    <navigationItem key="navigationItem" title="New Streak" id="bPe-bm-VNk">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="QKr-Ru-KHV">
+                            <connections>
+                                <action selector="save:" destination="xYG-kN-daj" id="6mF-0d-Zpe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUb-bi-ouv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

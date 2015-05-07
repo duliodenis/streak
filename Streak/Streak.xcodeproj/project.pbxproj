@@ -15,6 +15,7 @@
 		6C3CD8671AF953AC00592BAA /* StreakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3CD8661AF953AC00592BAA /* StreakTests.m */; };
 		6C3CD8731AF9546300592BAA /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3CD8721AF9546300592BAA /* ListViewController.m */; };
 		6C73943B1AFAA03D00F6E91E /* Streak.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73943A1AFAA03D00F6E91E /* Streak.m */; };
+		6C73943E1AFAD23000F6E91E /* AddStreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73943D1AFAD23000F6E91E /* AddStreakViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		6C3CD8721AF9546300592BAA /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ViewControllers/ListViewController.m; sourceTree = "<group>"; };
 		6C7394391AFAA03D00F6E91E /* Streak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Streak.h; path = Models/Streak.h; sourceTree = "<group>"; };
 		6C73943A1AFAA03D00F6E91E /* Streak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Streak.m; path = Models/Streak.m; sourceTree = "<group>"; };
+		6C73943C1AFAD23000F6E91E /* AddStreakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStreakViewController.h; path = ViewControllers/AddStreakViewController.h; sourceTree = "<group>"; };
+		6C73943D1AFAD23000F6E91E /* AddStreakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStreakViewController.m; path = ViewControllers/AddStreakViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 			children = (
 				6C3CD8711AF9546300592BAA /* ListViewController.h */,
 				6C3CD8721AF9546300592BAA /* ListViewController.m */,
+				6C73943C1AFAD23000F6E91E /* AddStreakViewController.h */,
+				6C73943D1AFAD23000F6E91E /* AddStreakViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				6C73943B1AFAA03D00F6E91E /* Streak.m in Sources */,
 				6C3CD8731AF9546300592BAA /* ListViewController.m in Sources */,
 				6C3CD84D1AF953AC00592BAA /* main.m in Sources */,
+				6C73943E1AFAD23000F6E91E /* AddStreakViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
