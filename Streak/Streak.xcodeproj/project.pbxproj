@@ -16,6 +16,8 @@
 		6C3CD8731AF9546300592BAA /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3CD8721AF9546300592BAA /* ListViewController.m */; };
 		6C73943B1AFAA03D00F6E91E /* Streak.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73943A1AFAA03D00F6E91E /* Streak.m */; };
 		6C73943E1AFAD23000F6E91E /* AddStreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C73943D1AFAD23000F6E91E /* AddStreakViewController.m */; };
+		6CB259D91AFBD132005AAAE4 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB259D71AFBD132005AAAE4 /* Fabric.framework */; };
+		6CB259DA1AFBD132005AAAE4 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB259D81AFBD132005AAAE4 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		6C73943A1AFAA03D00F6E91E /* Streak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Streak.m; path = Models/Streak.m; sourceTree = "<group>"; };
 		6C73943C1AFAD23000F6E91E /* AddStreakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddStreakViewController.h; path = ViewControllers/AddStreakViewController.h; sourceTree = "<group>"; };
 		6C73943D1AFAD23000F6E91E /* AddStreakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddStreakViewController.m; path = ViewControllers/AddStreakViewController.m; sourceTree = "<group>"; };
+		6CB259D71AFBD132005AAAE4 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		6CB259D81AFBD132005AAAE4 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB259DA1AFBD132005AAAE4 /* Crashlytics.framework in Frameworks */,
+				6CB259D91AFBD132005AAAE4 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,7 @@
 				6C3CD8571AF953AC00592BAA /* Images.xcassets */,
 				6C3CD8591AF953AC00592BAA /* LaunchScreen.xib */,
 				6C3CD84A1AF953AC00592BAA /* Supporting Files */,
+				6CB259D61AFBD111005AAAE4 /* Frameworks */,
 			);
 			path = Streak;
 			sourceTree = "<group>";
@@ -145,6 +152,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		6CB259D61AFBD111005AAAE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CB259D71AFBD132005AAAE4 /* Fabric.framework */,
+				6CB259D81AFBD132005AAAE4 /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +171,7 @@
 				6C3CD8431AF953AC00592BAA /* Sources */,
 				6C3CD8441AF953AC00592BAA /* Frameworks */,
 				6C3CD8451AF953AC00592BAA /* Resources */,
+				6CB259D51AFBD0B9005AAAE4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -239,6 +256,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6CB259D51AFBD0B9005AAAE4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C3CD8431AF953AC00592BAA /* Sources */ = {
@@ -375,6 +408,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Streak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -386,6 +423,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Streak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
