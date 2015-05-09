@@ -36,6 +36,13 @@
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>Parse</key>
+	<dict>
+		<key>AppID</key>
+		<string>YOUR-APPID</string>
+		<key>clientKey</key>
+		<string>YOUR-CLIENT-KEY</string>
+	</dict>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -50,5 +57,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>ddAppBuild</key>
+	<string>0.1</string>
 </dict>
 </plist>

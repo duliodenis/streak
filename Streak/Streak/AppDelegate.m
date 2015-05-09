@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -18,7 +19,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Initialize Fabric with Crashlytics.
     [Fabric with:@[CrashlyticsKit]];
+    
+    // Initialize Parse.
+    [Parse enableLocalDatastore];
+    NSDictionary *parse = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Parse"];
+    [Parse setApplicationId:parse[@"AppID"]
+                  clientKey:parse[@"clientKey"]];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
     return YES;
 }
 

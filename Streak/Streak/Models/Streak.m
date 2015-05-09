@@ -7,7 +7,16 @@
 //
 
 #import "Streak.h"
+#import <Parse/Parse.h>
 
 @implementation Streak
+
+- (void)saveStreak {
+    PFObject *streak = [PFObject objectWithClassName:@"Streak"];
+    streak[@"name"] = self.name;
+    
+    [streak pinInBackground];
+    [streak saveEventually];
+}
 
 @end

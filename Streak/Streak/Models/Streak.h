@@ -13,4 +13,7 @@
 @property (nonatomic) NSDate *date;
 @property (nonatomic) NSInteger type;
 @property (nonatomic) NSInteger status;
+
+- (void)saveStreak;
+
 @end

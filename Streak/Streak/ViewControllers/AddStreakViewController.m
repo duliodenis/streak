@@ -7,8 +7,10 @@
 //
 
 #import "AddStreakViewController.h"
+#import "Streak.h"
 
 @interface AddStreakViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *streakNameTextField;
 
 @end
 
@@ -19,9 +21,10 @@
 }
 
 - (IBAction)save:(id)sender {
-    
+    Streak *streak = [[Streak alloc] init];
+    streak.name = self.streakNameTextField.text;
+    [streak saveStreak];
+    [self.navigationController popViewControllerAnimated:YES];
 }
-
-
 
 @end
