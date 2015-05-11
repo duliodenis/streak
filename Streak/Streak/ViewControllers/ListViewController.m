@@ -14,6 +14,7 @@
 @interface ListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSMutableArray *streaks;
+@property (nonatomic) UIRefreshControl *refreshControl;
 @end
 
 @implementation ListViewController
@@ -22,7 +23,36 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    UIView *refreshView = [[UIView alloc] initWithFrame:CGRectMake(0, 55, 0, 0)];
+    [self.tableView insertSubview:refreshView atIndex:0];
+    
+    // Initialize Refresh Control
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:@"Pull to Refresh"];
+    self.refreshControl.backgroundColor = [UIColor grayColor];
+    self.refreshControl.tintColor = [UIColor redColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(refreshTableView)
+                  forControlEvents:UIControlEventValueChanged];
+    
+    [refreshView addSubview:self.refreshControl];
+
 }
+
+
+- (void)refreshTableView {
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:@"Refreshing the TableView"];
+    [self loadStreaks];
+    
+    //set the date and time of refreshing
+    NSDateFormatter *formattedDate = [[NSDateFormatter alloc]init];
+    [formattedDate setDateFormat:@"MMM d h:mm a"];
+    NSString *lastupdated = [NSString stringWithFormat:@"Last Updated on %@",[formattedDate stringFromDate:[NSDate date]]];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc]initWithString:lastupdated];
+    [self.refreshControl endRefreshing];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [self loadStreaks];
