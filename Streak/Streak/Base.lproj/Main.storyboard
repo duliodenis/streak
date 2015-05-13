@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wsy-3m-QEo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="29" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wsy-3m-QEo">
                                 <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="s8Y-Hy-ZK2">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="29" id="s8Y-Hy-ZK2">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s8Y-Hy-ZK2" id="JRL-FI-li5">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -47,13 +47,49 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="wsy-3m-QEo" id="DZP-sj-qxh"/>
+                        <segue destination="vYt-XH-NMO" kind="push" identifier="editStreak" id="rZe-bp-ywD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="777" y="406"/>
         </scene>
-        <!--New Streak-->
+        <!--Edit Goal-->
+        <scene sceneID="NFf-aO-MLB">
+            <objects>
+                <viewController id="vYt-XH-NMO" customClass="EditStreakViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tdc-q9-yo5"/>
+                        <viewControllerLayoutGuide type="bottom" id="v69-3M-JzW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eYF-12-JKH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fY-ma-036">
+                                <rect key="frame" x="16" y="72" width="288" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Goal" id="pdF-dc-o7p">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BQ0-Gc-ynr">
+                            <connections>
+                                <action selector="save:" destination="vYt-XH-NMO" id="CSe-f8-dCw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="streakNameTextField" destination="8fY-ma-036" id="22I-Aw-14J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EFe-oL-cxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221" y="1044"/>
+        </scene>
+        <!--New Goal-->
         <scene sceneID="Rzq-00-ZmJ">
             <objects>
                 <viewController id="xYG-kN-daj" customClass="AddStreakViewController" sceneMemberID="viewController">
@@ -65,7 +101,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of your streak" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ywT-fv-qG2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the name of your goal" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ywT-fv-qG2">
                                 <rect key="frame" x="16" y="89" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -78,7 +114,7 @@
                             <constraint firstItem="ywT-fv-qG2" firstAttribute="top" secondItem="0n9-6u-eqr" secondAttribute="bottom" constant="25" id="lvT-Dr-kQf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Streak" id="bPe-bm-VNk">
+                    <navigationItem key="navigationItem" title="New Goal" id="bPe-bm-VNk">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="QKr-Ru-KHV">
                             <connections>
                                 <action selector="save:" destination="xYG-kN-daj" id="6mF-0d-Zpe"/>

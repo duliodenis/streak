@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C0139C91B03B67F00D763A9 /* EditStreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0139C81B03B67F00D763A9 /* EditStreakViewController.m */; };
 		6C3CD84D1AF953AC00592BAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3CD84C1AF953AC00592BAA /* main.m */; };
 		6C3CD8501AF953AC00592BAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3CD84F1AF953AC00592BAA /* AppDelegate.m */; };
 		6C3CD8561AF953AC00592BAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3CD8541AF953AC00592BAA /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C0139C71B03B67F00D763A9 /* EditStreakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditStreakViewController.h; path = ViewControllers/EditStreakViewController.h; sourceTree = "<group>"; };
+		6C0139C81B03B67F00D763A9 /* EditStreakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditStreakViewController.m; path = ViewControllers/EditStreakViewController.m; sourceTree = "<group>"; };
 		6C3CD8471AF953AC00592BAA /* Streak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Streak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3CD84B1AF953AC00592BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C3CD84C1AF953AC00592BAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				6C3CD8721AF9546300592BAA /* ListViewController.m */,
 				6C73943C1AFAD23000F6E91E /* AddStreakViewController.h */,
 				6C73943D1AFAD23000F6E91E /* AddStreakViewController.m */,
+				6C0139C71B03B67F00D763A9 /* EditStreakViewController.h */,
+				6C0139C81B03B67F00D763A9 /* EditStreakViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				6C73943B1AFAA03D00F6E91E /* Streak.m in Sources */,
 				6C3CD8731AF9546300592BAA /* ListViewController.m in Sources */,
 				6C3CD84D1AF953AC00592BAA /* main.m in Sources */,
+				6C0139C91B03B67F00D763A9 /* EditStreakViewController.m in Sources */,
 				6C73943E1AFAD23000F6E91E /* AddStreakViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,7 +39,7 @@
 	<key>Parse</key>
 	<dict>
 		<key>AppID</key>
-		<string>YOUR-APPID</string>
+		<string>YOUR-APP-ID</string>
 		<key>clientKey</key>
 		<string>YOUR-CLIENT-KEY</string>
 	</dict>

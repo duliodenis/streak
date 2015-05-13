@@ -7,6 +7,7 @@
 //
 
 #import "ListViewController.h"
+#import "EditStreakViewController.h"
 #import "Streak.h"
 #import <Parse/Parse.h>
 #import <Bolts/Bolts.h>
@@ -69,6 +70,7 @@
             
             for (PFObject *retrievedStreak in objects) {
                 Streak *streak = [[Streak alloc] init];
+                streak.objectId = retrievedStreak.objectId;
                 streak.name = [retrievedStreak objectForKey:@"name"];
                 [self.streaks addObject:streak];
             }
@@ -107,6 +109,23 @@
     }
 
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"editStreak" sender:self];
+}
+
+
+#pragma mark - Segue Delegate
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"editStreak"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Streak *streak = self.streaks[indexPath.row];
+        //streak.name = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]].textLabel.text;
+        EditStreakViewController *nextViewController = segue.destinationViewController;
+        nextViewController.streak = streak;
+    }
 }
 
 @end

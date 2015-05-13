@@ -12,8 +12,15 @@
 @implementation Streak
 
 - (void)saveStreak {
-    PFObject *streak = [PFObject objectWithClassName:@"Streak"];
-    streak[@"name"] = self.name;
+    PFObject *streak;
+    
+    if (!self.objectId) {   // If the Object is new
+        streak = [PFObject objectWithClassName:@"Streak"];
+        streak[@"name"] = self.name;
+    } else {                // otherwise just update the object
+        streak = [PFObject objectWithoutDataWithClassName:@"Streak" objectId:self.objectId];
+        streak[@"name"] = self.name;
+    }
     
     [streak pinInBackground];
     [streak saveEventually];

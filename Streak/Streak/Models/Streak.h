@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Streak : NSObject
+@property (nonatomic) NSString *objectId;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSDate *date;
 @property (nonatomic) NSInteger type;
